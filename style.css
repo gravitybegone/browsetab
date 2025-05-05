@@ -1,0 +1,78 @@
+#bpt-tab {
+    position: fixed;
+    cursor: pointer;
+    z-index: 9999;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+
+}
+
+#bpt-tab {
+    top: var(--bpt-tab-top, 40%);
+    padding-top: var(--bpt-tab-padding-top, 12px);
+    padding-right: var(--bpt-tab-padding-right, 16px);
+    padding-bottom: var(--bpt-tab-padding-bottom, 12px);
+    padding-left: var(--bpt-tab-padding-left, 16px);
+    font-size: var(--bpt-tab-font-size, 16px);
+      background: var(--bpt-tab-bg, #333);
+    color: var(--bpt-tab-color, #fff);
+}
+
+#bpt-tab.bpt-left {
+    left: 0;
+}
+
+#bpt-tab.bpt-right {
+    right: 0;
+    left: auto;
+    transform: rotate(90deg);
+    transform-origin: right top;
+}
+
+#bpt-panel {
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: var(--bpt-panel-bg, #f9f9f9);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 9998;
+    transition: all 0.3s ease;
+    color: var(--bpt-menu-color, #333);
+}
+#bpt-panel.bpt-left {
+    left: -300px;
+}
+#bpt-panel.bpt-left.open {
+    left: 0;
+}
+#bpt-panel.bpt-right {
+    right: -300px;
+    left: auto;
+}
+#bpt-panel.bpt-right.open {
+    right: 0;
+}
+
+#bpt-close {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: var(--bpt-close-color, #000);
+}
+
+.bpt-menu {
+    list-style: none;
+    padding: 0;
+}
+.bpt-menu li {
+    margin: 10px 0;
+}
+.bpt-menu li a {
+    text-decoration: none;
+    color: var(--bpt-menu-color, #333);
+  font-size: var(--bpt-menu-font-size, 14px);
+}
